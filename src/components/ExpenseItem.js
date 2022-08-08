@@ -1,16 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import './ExpenseItem.css'
+import "./ExpenseItem.css";
 
 ExpenseItem.propTypes = {};
 
 function ExpenseItem(props) {
+  const expenseDate = new Date(2022, 8,8);
+  const expenseTitle = "Car Insurance";
+  const expenseAmount = 294.67;
   return (
     <div className="expense-item">
-      <div>August 06th 2022</div>
+      <div>{expenseDate.toISOString()}</div>
       <div className="expense-item__description">
-        <h2>Car Insurance</h2>
-        <div className="expense-item__price">$294.67</div>
+        <h2>{expenseTitle}</h2>
+        <div className="expense-item__price">${expenseAmount}</div>
       </div>
     </div>
   );
