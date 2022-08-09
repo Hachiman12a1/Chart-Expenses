@@ -29,6 +29,9 @@ function ExpenseForm(props) {
     };
 
     console.log(expenseData);
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDate("");
   };
 
   return (
@@ -36,7 +39,11 @@ function ExpenseForm(props) {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label htmlFor="">Title</label>
-          <input type="text" onChange={titleChangeHandler} />
+          <input
+            type="text"
+            value={enteredTitle}
+            onChange={titleChangeHandler}
+          />
         </div>
 
         <div className="new-expense__control">
@@ -45,6 +52,7 @@ function ExpenseForm(props) {
             type="number"
             min="0.01"
             step="0.01"
+            value = {enteredAmount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -55,6 +63,7 @@ function ExpenseForm(props) {
             type="date"
             min="2019-01-01"
             step="2023-12-31"
+            value = {enteredDate}
             onChange={dateChangeHandler}
           />
         </div>
