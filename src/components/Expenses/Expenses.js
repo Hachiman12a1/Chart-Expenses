@@ -2,7 +2,7 @@ import React from "react";
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 import { PropTypes } from 'prop-types';
-import Card from "./Card";
+import Card from '../UI/Card';
 
 Expenses.propTypes = {
   items : PropTypes.array,
